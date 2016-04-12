@@ -1,12 +1,12 @@
 # HexFAB Quadro Motor Shield Library
 
 - Publisher: HexFAB (www.0xfab.de)
-- License: MIT
 - Motor driver: VNH2SP30-E
 
 
 ## Arduino pin connection table:
 
+```
        | Driver 1  | Driver 2  | Driver 3  | Driver 4
 -------+-----------+-----------+-----------+----------
 DIAC A | 39        | 43        | 47        | 51
@@ -15,6 +15,7 @@ In A   | 38        | 42        | 46        | 50
 In B   | 41        | 45        | 49        | 53
 PWM    | 13        | 12        | 11        | 10
 CS     | A7        | A6        | A5        | A4
+```
 
 
 ## Pin functions (excerpt from VNH2SP30-E datasheet):
