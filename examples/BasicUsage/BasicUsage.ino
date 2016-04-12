@@ -1,13 +1,12 @@
 #include <HexFabQuadroMotorShield.h>
 
 void setup() {
-    motor1.init();
-    motor2.init();
-    motor3.init();
-    motor4.init();
+
 }
 
 void loop() {
-    motor1.setSpeed(1);
-    motor2.setSpeed(1);
+  delay(4);
+  HFMotor1.setSpeed(255);
+  delay(100);
+  HFMotor1.stop();
 }
