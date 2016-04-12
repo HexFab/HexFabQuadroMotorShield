@@ -2,6 +2,15 @@
 
 /* This example generates a triangle speed function on motor 1 */
 
+void setup() {
+  HFMotor1.stop();
+}
+
+void loop() {
+  delay(10);
+  HFMotor1.setSpeed(nextSpeed());
+}
+
 int nextSpeed() {
   static int mySpeed = 0;
   static int speedDelta = 1;
@@ -14,13 +23,4 @@ int nextSpeed() {
     speedDelta = 1;
   }
   return mySpeed;
-}
-
-void setup() {
-  HFMotor1.stop();
-}
-
-void loop() {
-  delay(10);
-  HFMotor1.setSpeed(nextSpeed());
 }
