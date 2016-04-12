@@ -1,13 +1,26 @@
 #include <HexFabQuadroMotorShield.h>
 
+/* This example generates a triangle speed function on motor 1 */
+
+int nextSpeed() {
+  static int mySpeed = 0;
+  static int speedDelta = 1;
+
+  mySpeed += speedDelta;
+  if (mySpeed == 255) {
+    speedDelta = -1;
+  }
+  else if (mySpeed == -255) {
+    speedDelta = 1;
+  }
+  return mySpeed;
+}
+
 void setup() {
-  HFMotor1.setSpeed(-200);
-  HFMotor2.setSpeed(100);
-  HFMotor3.setSpeed(-100);
-  HFMotor4.setSpeed(255);
+  HFMotor1.stop();
 }
 
 void loop() {
-  motor1.setSpeed(1);
-  motor2.setSpeed(1);
+  delay(10);
+  HFMotor1.setSpeed(nextSpeed());
 }
