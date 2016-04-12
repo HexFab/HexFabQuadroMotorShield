@@ -4,6 +4,41 @@
 - Motor driver: VNH2SP30-E
 
 
+## Usage example
+
+```arduino
+#include <HexFabQuadroMotorShield.h>
+
+void setup() {
+  Serial.begin(9600);
+
+  // run all four motors
+  HFMotor1.setSpeed(255);
+  HFMotor2.setSpeed(100);
+  HFMotor3.setSpeed(-100);
+  HFMotor4.setSpeed(-255);
+}
+
+void loop() {
+  // stop and start motor 1
+  delay(1000);
+  HFMotor1.stop();
+  delay(1000);
+  HFMotor1.setSpeed(255);
+
+  // error detection
+  if (HFMotor1.hasError()) {
+    Serial.println("Motor1 error detected!");
+  }
+
+  // print motor current
+  int current = HFMotor1.readCurrentSensor();
+  Serial.print("Motor1 current: ");
+  Serial.println(current);
+}
+```
+
+
 ## Arduino pin connection table:
 
 ```
