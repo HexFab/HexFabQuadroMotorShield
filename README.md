@@ -1,6 +1,6 @@
 # HexFAB Quadro Motor Shield Library
 
-- Publisher: HexFAB (www.0xfab.de)
+- Publisher: HexFAB (www.hexfab.de)
 - Motor driver: VNH2SP30-E
 
 
@@ -37,6 +37,14 @@ void loop() {
   Serial.println(current);
 }
 ```
+
+
+## Installation
+
+This library is listed in the Arduino library manager (search for "hexfab").
+Alternatively download all files from this repository, put them in a
+"HexFabQuadroMotorShield" folder in your Arduino library path and restart the
+Arduino software.
 
 
 ## Arduino pin connection table:
